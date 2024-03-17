@@ -3,6 +3,7 @@ let button = document.querySelector("#btn")
 let text = document.querySelector("#text");
 let container = document.querySelector(".container");
 let body = document.querySelector("body");
+let arr = []
 
 container.style.cssText = "max-width: 1440px;  text-align: center; margin: 50px auto;";
 body.style.background = "#212121";
@@ -13,6 +14,7 @@ input.addEventListener("change", (event) => {
     
     if (event.target.value != false) {
         text.innerHTML += `<li>${inputValue}</li>`;
+        arr.push(inputValue)
     };
 
     event.target.value = "";
@@ -23,3 +25,4 @@ button.addEventListener("click", (event) => {
     text.innerHTML += `<li>${inputValue}</li>`;
   }
 });
+
